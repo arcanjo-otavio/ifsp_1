@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas e Políticas | Refúgio Jatobá Eco-Lodge</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= CABEÇALHO PRINCIPAL ================= -->
+    <header class="cabecalho-principal">
+        <nav class="level container p-4" aria-label="Navegação principal do site">
+            <section class="level-left">
+                <a href="index.html" class="level-item hvr-shrink" aria-label="Refúgio Jatobá - Ir para a página inicial">
+                    <p>
+                        <strong class="is-size-3 texto-verde-escuro fonte-serifada">Refúgio Jatobá</strong><br>
+                        <em class="is-size-7 has-text-grey-dark">Eco-Lodge São Carlos</em>
+                    </p>
+                </a>
+            </section>
+
+            <section class="level-right">
+                <ul class="level-item menu-lista mr-4">
+                    <li><a href="index.html" class="link-menu hvr-underline-from-left">O Refúgio</a></li>
+                    <li><a href="experiencias.html" class="link-menu hvr-underline-from-left">Experiências</a></li>
+                    <li><a href="acomodacoes.html" class="link-menu hvr-underline-from-left">Acomodações</a></li>
+                </ul>
+                <p class="level-item">
+                    <a href="reservas.html" class="button botao-jatoba hvr-float-shadow" aria-current="page">
+                        Reservas &amp; Promoções
+                    </a>
+                </p>
+            </section>
+        </nav>
+
+        <!-- Navegação Interna da Página -->
+        <nav class="nav-ancoras p-2" aria-label="Navegação interna de reservas e políticas">
+            <a href="#formulario-reserva" class="link-ancora">Solicitar Reserva</a>
+            <a href="#termos-politicas" class="link-ancora">Políticas de Cancelamento</a>
+            <a href="#legislacao-ambiental" class="link-ancora">Conservação Ambiental</a>
+            <a href="#detox-digital" class="link-ancora">Termo Detox Digital</a>
+        </nav>
+    </header>
+
+    <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+    <main>
+        
+        <!-- Banner de Título -->
+        <section class="hero is-medium bg-hero">
+            <header class="hero-body has-text-centered container">
+                <h1 class="title is-2 has-text-white">Reservas &amp; Compromisso</h1>
+                <p class="subtitle is-6 texto-creme mt-2 espacamento-texto">
+                    GARANTA SEU SANTUÁRIO PARTICULAR NO CERRADO PAULISTA
+                </p>
+            </header>
+        </section>
+
+        <!-- Seção em Duas Colunas: Formulário (Section) + Políticas (Aside) -->
+        <section class="section bg-branco">
+            <!-- Separamos o container das colunas para centralizar perfeitamente -->
+            <div class="container">
+                <!-- is-centered empurra todo o conjunto para o meio da tela -->
+                <div class="columns is-variable is-6 is-centered">
+                    
+                    <!-- COLUNA PRINCIPAL: Formulário (Agora mais largo e ao centro: is-7) -->
+                    <section id="formulario-reserva" class="column is-7">
+                        <article class="caixa-formulario p-6">
+                            <h2 class="title is-3 texto-verde-escuro mb-4">Solicitação de Reserva</h2>
+                            <p class="has-text-grey-dark mb-5 is-size-6">
+                                Preencha os dados abaixo para verificar a disponibilidade. Nossa recepção retornará com o link para confirmação da estadia.
+                            </p>
+                            
+                            <form action="#" method="post">
+                                
+                                <!-- Grupo 1: Dados Pessoais -->
+                                <fieldset class="mb-5">
+                                    <legend class="is-size-5 legenda-form pb-2 mb-4">1. Dados do Hóspede Titular</legend>
+                                    
+                                    <p class="field mb-4">
+                                        <label class="label" for="nomeCompleto">Nome Completo</label>
+                                        <input class="input" type="text" id="nomeCompleto" name="nomeCompleto" placeholder="Ex: Helena Souza" required>
+                                    </p>
+
+                                    <div class="columns">
+                                        <p class="column field mb-0">
+                                            <label class="label" for="emailContato">E-mail Principal</label>
+                                            <input class="input" type="email" id="emailContato" name="emailContato" placeholder="helena@exemplo.com.br" required>
+                                        </p>
+                                        <p class="column field mb-0">
+                                            <label class="label" for="telefoneContato">Telefone / WhatsApp</label>
+                                            <input class="input" type="tel" id="telefoneContato" name="telefoneContato" placeholder="(16) 99999-9999" required>
+                                        </p>
+                                    </div>
+                                </fieldset>
+
+                                <!-- Grupo 2: Detalhes da Estadia -->
+                                <fieldset class="mb-5">
+                                    <legend class="is-size-5 legenda-form pb-2 mb-4">2. Detalhes da Hospedagem</legend>
+                                    
+                                    <section class="columns" aria-label="Datas da viagem">
+                                        <p class="column field mb-0">
+                                            <label class="label" for="dataCheckin">Data de Check-in</label>
+                                            <input class="input" type="date" id="dataCheckin" name="dataCheckin" required>
+                                        </p>
+                                        <p class="column field mb-0">
+                                            <label class="label" for="dataCheckout">Data de Check-out</label>
+                                            <input class="input" type="date" id="dataCheckout" name="dataCheckout" required>
+                                        </p>
+                                    </section>
+
+                                    <section class="columns" aria-label="Quantidade de hóspedes e escolha do quarto">
+                                        <p class="column is-4 field mb-0">
+                                            <label class="label" for="quantidadeHospedes">Hóspedes</label>
+                                            <input class="input" type="number" id="quantidadeHospedes" name="quantidadeHospedes" min="1" max="4" value="2" required>
+                                        </p>
+
+                                        <p class="column is-8 field mb-0">
+                                            <label class="label" for="tipoQuarto">Acomodação Desejada</label>
+                                            <span class="select is-fullwidth">
+                                                <select id="tipoQuarto" name="tipoQuarto" required>
+                                                    <option value="" disabled selected>Selecione uma categoria...</option>
+                                                    <option value="jardim">Quarto Jardim (35m²)</option>
+                                                    <option value="panoramico">Quarto Panorâmico (45m²)</option>
+                                                    <option value="master">Quarto Refúgio - Master (65m²)</option>
+                                                    <option value="familiar">Suíte Jatobá - Familiar (80m²)</option>
+                                                </select>
+                                            </span>
+                                        </p>
+                                    </section>
+
+                                    <fieldset class="field mt-4 mb-4">
+                                        <legend class="label">Adesão ao Cofre Digital (Câmera Polaroid inclusa)</legend>
+                                        <section class="grupo-radio" aria-label="Opções de adesão ao cofre digital">
+                                            <label class="radio has-text-grey-dark" for="cofreSim">
+                                                <input type="radio" id="cofreSim" name="cofreDigital" value="sim" checked>
+                                                Desejo guardar o celular no cofre e receber a câmera analógica
+                                            </label>
+                                            <label class="radio has-text-grey-dark" for="cofreNao">
+                                                <input type="radio" id="cofreNao" name="cofreDigital" value="nao">
+                                                Prefiro manter o celular comigo (em modo silencioso)
+                                            </label>
+                                        </section>
+                                    </fieldset>
+
+                                    <p class="field mb-4">
+                                        <label class="label" for="observacoes">Restrições Alimentares ou Pedidos Especiais</label>
+                                        <textarea class="textarea" id="observacoes" name="observacoes" rows="3" placeholder="Informe alergias, dieta vegana/vegetariana ou se viajará com pet..."></textarea>
+                                    </p>
+                                </fieldset>
+
+                                <!-- Grupo 3: Aceite e Envio -->
+                                <fieldset>
+                                    <legend class="is-size-5 legenda-form pb-2 mb-4">3. Termo de Compromisso</legend>
+                                    
+                                    <p class="field mb-5">
+                                        <label class="checkbox has-text-grey-dark" for="aceiteTermos">
+                                            <input type="checkbox" id="aceiteTermos" name="aceiteTermos" required>
+                                            <strong>Li e concordo integralmente</strong> com os Termos e Políticas do Refúgio Jatobá.
+                                        </label>
+                                    </p>
+
+                                    <p class="field">
+                                        <button type="submit" class="button botao-jatoba is-medium is-fullwidth hvr-float-shadow">
+                                            Enviar Solicitação de Reserva
+                                        </button>
+                                    </p>
+                                </fieldset>
+
+                            </form>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- ================= RODAPÉ PADRONIZADO ================= -->
+    <footer class="footer bg-rodape pt-6 pb-6">
+        <section class="container columns">
+            <section class="column is-one-third">
+                <h2 class="title is-5 has-text-white">Refúgio Jatobá</h2>
+                <p class="texto-creme is-size-6">
+                    O seu santuário particular de reconexão com a natureza no coração do interior paulista. Luxo rústico, arquitetura em taipa de pilão e sustentabilidade.
+                </p>
+            </section>
+
+            <section class="column is-one-third">
+                <h2 class="title is-5 has-text-white">Navegação</h2>
+                <nav aria-label="Navegação secundária do rodapé">
+                    <ul class="lista-rodape">
+                        <li><a href="index.html" class="link-rodape">O Refúgio (Página Inicial)</a></li>
+                        <li><a href="experiencias.html" class="link-rodape">Experiências e Gastronomia</a></li>
+                        <li><a href="acomodacoes.html" class="link-rodape">Acomodações e Tarifas</a></li>
+                        <li><a href="reservas.html" class="link-rodape">Reservas e Políticas</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section class="column is-one-third">
+                <h2 class="title is-5 has-text-white">Contato e Localização</h2>
+                <address class="texto-creme is-size-6">
+                    <p class="mb-2"><strong>Endereço:</strong> Estrada Rural de São Carlos, Km 12 — Zona Rural, São Carlos, SP</p>
+                    <p class="mb-2"><strong>E-mail:</strong> contato@refugiojatoba.com.br</p>
+                    <p><strong>Telefone / WhatsApp:</strong> (16) 99999-0000</p>
+                </address>
+            </section>
+        </section>
+        
+        <hr class="container divisor-rodape mt-5 mb-5">
+        
+        <section class="container has-text-centered texto-creme">
+            <p class="is-size-7">
+                &copy; 2026 Refúgio Jatobá Eco-Lodge. Todos os direitos reservados.<br>
+                Website desenvolvido com HTML5 Semântico e CSS3 para fins acadêmicos (IFSP).
+            </p>
+        </section>
+    </footer>
+
+</body>
+</html>

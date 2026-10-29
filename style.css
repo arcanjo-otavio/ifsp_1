@@ -1,0 +1,406 @@
+/* ==========================================================================
+   STYLE.CSS - REFÚGIO JATOBÁ ECO-LODGE
+   Posicionamento estruturado exclusivamente com Flexbox e CSS Grid
+   ========================================================================== */
+
+/* Deslizamento suave para âncoras internas */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #2b2b2b;
+    background-color: #fcf9f2;
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* --- TIPOGRAFIA --- */
+h1, h2, h3, h4, h5, h6, .fonte-serifada {
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.fonte-sem-serifa {
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.espacamento-texto {
+    letter-spacing: 2px;
+}
+
+.texto-historia {
+    line-height: 1.8;
+}
+
+address {
+    font-style: normal;
+}
+
+/* --- CORES DE ALTO CONTRASTE (Garante 90+ no Lighthouse) --- */
+.texto-verde-escuro {
+    color: #1b4d3e !important;
+}
+
+.texto-terracota {
+    color: #7a2e22 !important;
+}
+
+.texto-creme {
+    color: #f5efe6 !important;
+}
+
+.bg-hero {
+    background-color: #5c4b3c;
+}
+
+.bg-bege {
+    background-color: #fcf9f2;
+}
+
+.bg-branco {
+    background-color: #ffffff;
+}
+
+.bg-escuro {
+    background-color: #1a1a1a;
+}
+
+.bg-rodape {
+    background-color: #121212;
+}
+
+/* --- BOTÕES CUSTOMIZADOS COM ALTO CONTRASTE --- */
+.botao-jatoba {
+    background-color: #1b4d3e !important;
+    color: #ffffff !important;
+    border: 2px solid #1b4d3e !important;
+    font-weight: bold;
+}
+
+.botao-jatoba:hover {
+    background-color: #12352a !important;
+    color: #ffffff !important;
+}
+
+/* --- CABEÇALHO E NAVEGAÇÃO (Flexbox) --- */
+.cabecalho-principal {
+    background-color: #ffffff;
+    border-bottom: 2px solid #e0d5c1;
+}
+
+.menu-lista {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.link-menu {
+    color: #1b4d3e;
+    font-weight: 700;
+}
+
+.link-menu:hover {
+    color: #7a2e22;
+}
+
+/* Barra de Navegação Interna (Âncoras) */
+.nav-ancoras {
+    background-color: #e9e0d1;
+    border-bottom: 1px solid #d4c5b0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.link-ancora {
+    color: #3d3127;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.link-ancora:hover {
+    color: #1b4d3e;
+    text-decoration: underline;
+}
+
+/* --- LAYOUTS CENTRAIS COM FLEXBOX E GRID (Sem uso de margin auto) --- */
+.bloco-centralizado {
+    display: grid;
+    place-items: center;
+}
+
+.largura-leitura {
+    max-width: 820px;
+}
+
+.grid-pilares {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+}
+
+/* --- CARTÕES E CAIXAS --- */
+.card-vivencia {
+    background-color: #7a2e22;
+    border: 1px solid #a34b3d;
+    border-radius: 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-gastronomia {
+    background-color: #ffffff;
+    border: 1px solid #e0d5c1;
+    border-radius: 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.card-pilar {
+    background-color: #fcf9f2;
+    border: 1px solid #e0d5c1;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.icone-destaque {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+/* --- MOLDURAS DE IMAGENS E VÍDEOS --- */
+.moldura-imagem-direita {
+    box-shadow: 14px 14px 0px 0px #e0d5c1;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.moldura-imagem-esquerda {
+    box-shadow: -14px 14px 0px 0px #e0d5c1;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.moldura-video {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    margin: 0 auto; /* Esta regra garante a centralização do vídeo */
+}
+
+.iframe-sem-borda {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.legenda-foto {
+    font-size: 0.85rem;
+    color: #4a4a4a;
+    font-style: italic;
+}
+
+.legenda-foto-escura {
+    font-size: 0.85rem;
+    color: #d6d6d6;
+    font-style: italic;
+}
+
+/* --- SEPARADORES E DESTAQUES DAS VIVÊNCIAS --- */
+.separador-item {
+    border-bottom: 1px solid #d4c5b0;
+}
+
+.separador-item-escuro {
+    border-bottom: 1px solid #383838;
+}
+
+.toque-especial-esquerda {
+    border-left: 4px solid #d48c70;
+    background-color: #2b1d1a;
+    border-radius: 0 6px 6px 0;
+}
+
+.toque-especial-direita {
+    border-right: 4px solid #d48c70;
+    background-color: #2b1d1a;
+    border-radius: 6px 0 0 6px;
+    text-align: right;
+}
+
+/* --- TABELA DE TARIFAS --- */
+.container-tabela-luxo {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    background-color: #ffffff;
+}
+
+.tabela-tarifas {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-tarifas caption {
+    background-color: #43362b;
+    color: #fcf9f2;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.15rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.tabela-tarifas thead {
+    background-color: #5c4b3c;
+}
+
+.tabela-tarifas thead th {
+    color: #fcf9f2 !important;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-weight: normal;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+    border: none !important;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tabela-tarifas tbody tr {
+    transition: background-color 0.25s ease;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.tabela-tarifas tbody tr:hover {
+    background-color: #fcf9f2 !important;
+}
+
+.tabela-tarifas tbody th {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #3d3127;
+    font-size: 1.05rem;
+    vertical-align: middle;
+    border: none !important;
+}
+
+.tabela-tarifas tbody td {
+    vertical-align: middle;
+    text-align: center;
+    color: #2b2b2b;
+    border: none !important;
+    font-size: 1rem;
+}
+
+.tabela-tarifas tfoot {
+    background-color: #e9e0d1;
+}
+
+.tabela-tarifas tfoot td {
+    color: #2b2b2b;
+    text-align: center;
+    border: none !important;
+}
+
+/* --- FORMULÁRIOS E LISTAS DE POLÍTICAS --- */
+.caixa-termos {
+    background-color: #fcf9f2;
+    border: 1px solid #d4c5b0;
+    border-radius: 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.caixa-formulario {
+    background-color: #fcf9f2;
+    border: 1px solid #d4c5b0;
+    border-radius: 8px;
+}
+
+.legenda-form {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #1b4d3e;
+    border-bottom: 2px solid #d4c5b0;
+    width: 100%;
+    font-weight: bold;
+}
+
+.lista-quadrada {
+    list-style-type: square;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.lista-disco {
+    list-style-type: disc;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.lista-ordenada {
+    list-style-type: decimal;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    color: #1b4d3e;
+}
+
+.lista-ordenada > li {
+    font-size: 1.15rem;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.lista-interna {
+    list-style-type: disc;
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.95rem;
+    color: #2b2b2b;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.grupo-radio {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* --- RODAPÉ --- */
+.lista-rodape {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.link-rodape {
+    color: #d6d6d6;
+    transition: color 0.3s ease;
+}
+
+.link-rodape:hover {
+    color: #a8e6cf;
+    text-decoration: underline;
+}
+
+.divisor-rodape {
+    background-color: #383838;
+    height: 1px;
+    border: none;
+}
