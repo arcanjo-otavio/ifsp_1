@@ -1,9 +1,5 @@
-/* ==========================================================================
-   STYLE.CSS - REFÚGIO JATOBÁ ECO-LODGE
-   Posicionamento estruturado exclusivamente com Flexbox e CSS Grid
-   ========================================================================== */
+/* CSS Resort Trojahnico */
 
-/* Deslizamento suave para âncoras internas */
 html {
     scroll-behavior: smooth;
 }
@@ -35,7 +31,7 @@ address {
     font-style: normal;
 }
 
-/* --- CORES DE ALTO CONTRASTE (Garante 90+ no Lighthouse) --- */
+/* --- CORES --- */
 .texto-verde-escuro {
     color: #1b4d3e !important;
 }
@@ -68,20 +64,20 @@ address {
     background-color: #121212;
 }
 
-/* --- BOTÕES CUSTOMIZADOS COM ALTO CONTRASTE --- */
-.botao-jatoba {
+/* --- BOTÕES --- */
+.botao-1 {
     background-color: #1b4d3e !important;
     color: #ffffff !important;
     border: 2px solid #1b4d3e !important;
     font-weight: bold;
 }
 
-.botao-jatoba:hover {
+.botao-1:hover {
     background-color: #12352a !important;
     color: #ffffff !important;
 }
 
-/* --- CABEÇALHO E NAVEGAÇÃO (Flexbox) --- */
+/* --- CABEÇALHO E NAVEGAÇÃO --- */
 .cabecalho-principal {
     background-color: #ffffff;
     border-bottom: 2px solid #e0d5c1;
@@ -104,7 +100,7 @@ address {
     color: #7a2e22;
 }
 
-/* Barra de Navegação Interna (Âncoras) */
+/* ---- BARRA NAVEGAÇÃO INTERNA --- */
 .nav-ancoras {
     background-color: #e9e0d1;
     border-bottom: 1px solid #d4c5b0;
@@ -128,7 +124,7 @@ address {
     text-decoration: underline;
 }
 
-/* --- LAYOUTS CENTRAIS COM FLEXBOX E GRID (Sem uso de margin auto) --- */
+/* -- CENTRAL -- */
 .bloco-centralizado {
     display: grid;
     place-items: center;
@@ -181,7 +177,7 @@ address {
     line-height: 1.2;
 }
 
-/* --- MOLDURAS DE IMAGENS E VÍDEOS --- */
+/* --- IMAGENS E VÍDEOS --- */
 .moldura-imagem-direita {
     box-shadow: 14px 14px 0px 0px #e0d5c1;
     border-radius: 4px;
@@ -198,7 +194,6 @@ address {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    margin: 0 auto; /* Esta regra garante a centralização do vídeo */
 }
 
 .iframe-sem-borda {
@@ -219,7 +214,7 @@ address {
     font-style: italic;
 }
 
-/* --- SEPARADORES E DESTAQUES DAS VIVÊNCIAS --- */
+/* --- VIVÊNCIAS --- */
 .separador-item {
     border-bottom: 1px solid #d4c5b0;
 }
@@ -260,7 +255,6 @@ address {
     font-family: 'Georgia', 'Times New Roman', serif;
     font-size: 1.15rem;
     font-weight: bold;
-    padding: 1rem;
 }
 
 .tabela-tarifas thead {
